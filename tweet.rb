@@ -27,6 +27,11 @@ class Tweet < ActiveRecord::Base
     if tweet
       tweet(tweet.text)
       tweet.update_attributes tweeted: true
+    else
+      Tweet.all.each do |t|
+        t.update_attributes tweeted: false
+      end
+      send_random_tweet
     end
   end
 
