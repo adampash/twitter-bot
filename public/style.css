@@ -1,0 +1,14 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tweet_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet_form textarea {
+  margin-bottom: 10px;
+  height: 300px;
+}

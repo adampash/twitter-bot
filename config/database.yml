@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  database: twitter_bot_dev
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  # database: wiki_archive
+  # encoding: unicode
+  # # username: wiki
+  # # password: <%= ENV['WIKI_ARCHIVE_DATABASE_PASSWORD'] %>
+  # pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
+  # # timeout: 5000
+  # url: <%= ENV['DATABASE_URL'] %>
