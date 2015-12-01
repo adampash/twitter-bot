@@ -14,7 +14,7 @@ end
 
 if !development?
   use Rack::Auth::Basic, "Restricted Area" do |username, password|
-    username == 'admin' and password == 'admin'
+    username == ENV["HTTP_USER"] and password == ENV["HTTP_PASS"]
   end
 end
 
